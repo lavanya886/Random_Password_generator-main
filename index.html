@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 Secure Password Generator</h1>
+            <p>Create strong, random passwords instantly</p>
+        </div>
+
+        <div class="password-display">
+            <input type="text" id="password" readonly placeholder="Click generate to create password" />
+            <button id="copy" class="copy-btn" title="Copy to clipboard">📋</button>
+        </div>
+
+        <div class="options">
+            <div class="option-group">
+                <label for="length">Password Length: <span id="length-value">12</span></label>
+                <input type="range" id="length" min="8" max="32" value="12" />
+            </div>
+
+            <div class="checkboxes">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="uppercase" checked />
+                    <span class="checkmark"></span>
+                    Uppercase (A-Z)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="lowercase" checked />
+                    <span class="checkmark"></span>
+                    Lowercase (a-z)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="numbers" checked />
+                    <span class="checkmark"></span>
+                    Numbers (0-9)
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="symbols" checked />
+                    <span class="checkmark"></span>
+                    Symbols (!@#$%^&*)
+                </label>
+            </div>
+        </div>
+
+        <div class="strength-indicator">
+            <div class="strength-bar">
+                <div id="strength-fill" class="strength-fill"></div>
+            </div>
+            <span id="strength-text">Password Strength: Medium</span>
+        </div>
+
+        <button id="generate" class="generate-btn">
+            <span class="btn-text">Generate Password</span>
+            <span class="btn-icon">⚡</span>
+        </button>
+
+        <div class="footer">
+            <p>Stay secure online with strong passwords</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
